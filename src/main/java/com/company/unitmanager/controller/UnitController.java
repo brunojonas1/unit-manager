@@ -8,7 +8,7 @@ import com.company.unitmanager.model.Unit;
 
 public class UnitController {
     private static final List<Unit> units = new ArrayList<>();
-    private static Long nextId = 1L;
+    private static int nextId = 1;
 
     public static Unit registerUnit(String name, String city){
         if (name == null || name.trim().isEmpty() || city == null ||city.trim().isEmpty()) {
@@ -24,28 +24,23 @@ public class UnitController {
         return units;
     }
 
-    public static Unit updateUnit(int id, String newName, String newcity){
-        if (newName == null || newName.trim().isEmpty() || newcity == null ||newcity.trim().isEmpty()){
+    public static Unit updateUnit(int id, String newName, String newCity){
+        if (newName == null || newName.trim().isEmpty() || newCity == null ||newCity.trim().isEmpty()){
             throw new InvalidDataException("Nome e cidade não podem ser vazios");
         }
 
         for (Unit u: units){
             if (u.getId()==id){
                 u.setName(newName.trim());
-                u.setAddress(newcity.trim());
+                u.setAddress(newCity.trim());
                 return u;
             }
         }
-        throw new InvalidDataException("Unidade com ID" + id + " não encontrada");
+        throw new InvalidDataException("Unidade com ID " + id + " não encontrada");
     }
 
     public static void deleteUnit(int id){
-        for (Unit u : units) {
-            if (u.getId() == id) {
-                units.remove(u);
-                return;
-            }
-        }
+        units.removeIf(u -> u.getId() == id);
     }
 
 

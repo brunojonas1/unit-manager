@@ -3,7 +3,7 @@ package com.company.unitmanager.model;
 public class Unit {
     private String name;
     private String address;
-    private Long id;
+    private int id;
 
     public Unit(String name, String city) {
         this.name = name;
@@ -26,11 +26,11 @@ public class Unit {
         this.address = address;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
