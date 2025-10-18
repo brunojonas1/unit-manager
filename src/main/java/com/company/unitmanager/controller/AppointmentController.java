@@ -1,35 +1,28 @@
 package com.company.unitmanager.controller;
 
 import com.company.unitmanager.model.Appointment;
+import com.company.unitmanager.service.AppointmentService;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 public class AppointmentController {
-    private List<Appointment> appointments = new ArrayList<>();
 
-    public void addAppointment(Appointment appointment) {
-        appointments.add(appointment);
+    public static Appointment registerAppointment(int unitId, LocalDate date, LocalTime time, String description) {
+        return AppointmentService.registerAppointment(unitId, date, time, description);
     }
 
-    public List<Appointment> listAppointmentByUnit(int unitId) {
-        List<Appointment> result = new ArrayList<>();
-        for (Appointment a : appointments){
-            if (a.getUnitId() == unitId) {
-                result.add(a);
-            }
-        }
-        return result;
+    public static List<Appointment> listAllAppointments() {
+        return AppointmentService.listAllAppointments();
     }
 
-    public void removeAppointment(int index) {
-        if (index >= 0 && index < appointments.size()) {
-            appointments.remove(index);
-        }
+    public static List<Appointment> listAppointmentsByUnit(int unitId) {
+        return AppointmentService.listAppointmentsByUnit(unitId);
     }
 
-    public List<Appointment> listAllAppointments() {
-        return appointments;
+    public static void deleteAppointment(int id) {
+        AppointmentService.deleteAppointment(id);
     }
 
 }

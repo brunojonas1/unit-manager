@@ -7,7 +7,7 @@ public class Menu {
 
     public static int displayMenu(){
         System.out.println("""
-                UNITRA - ESCOLHA UMA OPÇÃO:
+                ALICE - ESCOLHA UMA OPÇÃO:
                 1 - Cadastrar uma unidade/setor
                 2 - Listar unidades/setor
                 3 - Atualizar unidade/setor

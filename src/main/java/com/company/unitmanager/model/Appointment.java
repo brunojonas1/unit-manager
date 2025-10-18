@@ -4,16 +4,40 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Appointment {
+    private int id; //Identificador do agendamento
     private int unitId;
     private LocalDate date;
     private LocalTime time;
     private String description;
+
+    // Construtor vazio para Gson
+    public Appointment() {}
 
     public Appointment(int unitId, LocalDate date, LocalTime time, String description) {
         this.unitId = unitId;
         this.date = date;
         this.time = time;
         this.description = description;
+    }
+
+    public Appointment(int id, int unitId, LocalDate date, LocalTime time, String description) {
+        this.id = id;
+        this.unitId = unitId;
+        this.date = date;
+        this.time = time;
+        this.description = description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setUnitId(int unitId) {
+        this.unitId = unitId;
     }
 
     public int getUnitId() {
