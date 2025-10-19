@@ -1,7 +1,7 @@
-# Unit Management
+# Chemiria Nexus - Unit Management
 
-This is a simple project built with **Spring Boot** to manage units.  
-Currently, you can **create, update, and delete units by ID**. The system is still in its early stages, but soon it will include new features like **CSV file import** and **activity management within each unit**.
+**Chemiria Nexus** is a simple project built with **Spring Boot** to manage organizational units.
+Currently, you can **create, update, and delete units by ID**. The system is still in its early stages, but upcoming updates will include features like *CSV data import, activity management, and report generation*.
 
 ##  Tecnologias
 <div>
@@ -16,19 +16,21 @@ Currently, you can **create, update, and delete units by ID**. The system is sti
 
 ## Upcoming Features
 
-- Import data from CSV files  
-- Manage activities within each unit  
+- Import data from CSV files
+- Manage activities within each unit
+- Generate PDF reports
+- UI improvements
 
 
-
-The project is still under development, but contributions and suggestions are always welcome!
+**Chemiria Nexus** is currently under active development. New functionalities are being added, and contributions or suggestions are always welcome!
 
 
 ---
-# Gerenciamento de Unidades
+# Chemiria Nexus - Gerenciamento de Unidades
 
-Este é um projeto simples desenvolvido em **Spring Boot** para gerenciar unidades.  
-Por enquanto, você pode **criar, atualizar e deletar unidades por ID**. O sistema ainda está em fase inicial, mas em breve terá novos recursos, como **importação de arquivos CSV** e **gerenciamento de atividades dentro de cada unidade**.
+Chemiria Nexus é um projeto simples desenvolvido em **Spring Boot** para gerenciar unidades.  
+Atualmente, é possível criar, atualizar e deletar unidades por ID.
+O projeto ainda está em fase inicial, mas novos recursos já estão planejados.
 
 ##  Tecnologias
 <div>
@@ -37,15 +39,18 @@ Por enquanto, você pode **criar, atualizar e deletar unidades por ID**. O siste
 
 ## Funcionalidades Atuais
 
-- Criar unidades  
-- Atualizar unidades por ID  
-- Deletar unidades por ID  
+- Criar unidades/setores
+- Atualizar unidades por ID
+- Deletar unidades por ID
 
 ## Funcionalidades Futuras
 
-- Importar dados via arquivos CSV  
-- Gerenciar atividades dentro de cada unidade  
+- Importar dados via arquivos CSV
+- Gerenciar atividades dentro de cada unidade
+- Gerar relatórios em pdf
+- Melhorias na interface
 
+## Status do Projeto
 
-O projeto ainda está em desenvolvimento, mas contribuições e sugestões são muito bem-vindas!
+O **Chemiria Nexus** ainda está em fase de desenvolvimento, mas contribuições e sugestões são muito bem-vindas!
 
