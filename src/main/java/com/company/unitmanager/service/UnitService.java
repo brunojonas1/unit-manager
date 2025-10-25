@@ -1,6 +1,7 @@
 package com.company.unitmanager.service;
 
 import com.company.unitmanager.exception.InvalidDataException;
+import com.company.unitmanager.exception.UnitNotFoundException;
 import com.company.unitmanager.model.Unit;
 import com.company.unitmanager.repository.UnitRepository;
 
@@ -56,6 +57,15 @@ public class UnitService {
     public static void deleteUnit(int id){
         units.removeIf(u -> u.getId() == id);
         UnitRepository.saveUnits(units);
+    }
+
+    public static Unit findUnitById(int id) {
+        for (Unit u : units) {
+            if (u.getId() == id) {
+                return u;
+            }
+        }
+        throw new UnitNotFoundException("Unidade com id: " + id + "não encontrada.");
     }
 
 }

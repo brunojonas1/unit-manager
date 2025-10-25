@@ -26,8 +26,15 @@ public class AppointmentService {
             System.out.printf("Nenhum appointment encontrado.");
         }
     }
+    // Essa função evita modificações diretas
+    public static List<Appointment> getAppointments() {
+        return new ArrayList<>(appointments);
+    }
 
     public static Appointment registerAppointment(int unitId, LocalDate date, LocalTime time, String description) {
+        if (UnitService.findUnitById(unitId) == null) {
+            throw new InvalidDataException("A unidade com id" + unitId + "não foi encontrada.");
+        }
         if (description == null || description.trim().isEmpty()) {
             throw new InvalidDataException("A descrição não pode ser vazia.");
         }
